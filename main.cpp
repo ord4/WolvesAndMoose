@@ -1,5 +1,5 @@
 // Orion Davis 3003072 ord4@zips.uakron.edu
-// The University of Akron, Computer Science I, Prof. Crissey
+// The University of Akron, Computer Science I, Prof. Will
 // Project 2 Wolves and Moose Population
 
 // INCLUDED FILES
@@ -7,14 +7,19 @@
 #include <fstream>
 #include <cstdlib>
 #include "constants.hpp"
+#include "maximum.hpp"
+#include "minimum.hpp"
+#include "population.hpp"
 
 
 // FUNCTIONS
-void population(int[], int[])
+void population(int[], int[]);
+void maximum(int[], int&);
+void minimum(int[], int&);
 
 int main(int argc, char *argv[]){
    // Call to use the constants in the included hpp file
-   using namespace constants;
+   //using namespace constants;
 
    // Set the array sizes
    int wolves[101], moose[101];
@@ -45,7 +50,7 @@ int main(int argc, char *argv[]){
       minimum(moose, minMoosePop);
 
       // Format and write the report to the text file
-      writeReport(outFile, wolves, moose, maxWolfPop, minWolfPop, maxMoosePop, minMoosePop);
+      //writeReport(outFile, wolves, moose, maxWolfPop, minWolfPop, maxMoosePop, minMoosePop);
 
       outFile.close();
    }

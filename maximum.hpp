@@ -5,16 +5,13 @@
 * Post-Condition: Modifies passed variable to hold the year of maximum *
 *                 population                                           *
 ***********************************************************************/
-void maximum(int data[], int &maximum)
-{
+void maximum(int data[], int &maximum){
    maximum = 0;
-   for(int i = 1; i <= YEARS; i++)
-   {
-      if(data[i] > data[maximum])
-      {
+   for(int i = 1; i <= constants::YEARS; i++){
+      if(data[i] > data[maximum]){
          maximum = i;
       }
    }
 }
 
-#endif 
+#endif
